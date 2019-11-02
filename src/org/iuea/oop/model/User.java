@@ -11,4 +11,14 @@ package org.iuea.oop.model;
  */
 public class User {
     
+    private String UserRole;
+    
+    public void setRole(String userRole) {
+        this.UserRole = userRole;
+    }
+    public String getUserRole() {
+		return UserRole;
+        
+    }
+    
 }

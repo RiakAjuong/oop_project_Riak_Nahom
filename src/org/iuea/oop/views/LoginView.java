@@ -29,6 +29,7 @@ public class LoginView extends JFrame {
     Dimension screenSize = kit.getScreenSize();
     int screenHeight = screenSize.height;
     int screenWidth = screenSize.width;
+    public Object userName;
     
     public LoginView() {
         super("Login Form: ");
@@ -100,6 +101,12 @@ public class LoginView extends JFrame {
         add(pane);
         setBackground(Color.gray);
         setVisible(true);
+    }
+
+    public class login {
+
+        public login() {
+        }
     }
     
 }
