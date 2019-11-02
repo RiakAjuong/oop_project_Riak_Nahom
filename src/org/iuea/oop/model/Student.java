@@ -300,6 +300,8 @@ public class Student extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 lecturers.setForeground(Color.blue);
+                //lecturers.setForeground(Color.blue);
+
                 stdsPanel.setVisible(false);
                 coursePanel.setVisible(false);
                 courseUnitPanel.setVisible(false);
@@ -328,6 +330,5 @@ public class Student extends JFrame {
         
         this.setVisible(true);
     }
-    
-    
+
 }
