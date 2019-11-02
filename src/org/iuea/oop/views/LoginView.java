@@ -17,6 +17,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import org.iuea.oop.model.Student;
 
 /**
  *
@@ -24,11 +25,15 @@ import javax.swing.JTextField;
  */
 public class LoginView extends JFrame {
     JPanel pane;
+    public JButton login = new JButton("Login");
+    public JTextField username;
+    public JPasswordField password;
     
     Toolkit kit = Toolkit.getDefaultToolkit();
     Dimension screenSize = kit.getScreenSize();
     int screenHeight = screenSize.height;
     int screenWidth = screenSize.width;
+    public Object userName;
     
     public LoginView() {
         super("Login Form: ");
@@ -48,15 +53,15 @@ public class LoginView extends JFrame {
         passwordLabel.setBounds(90, 90, 150, 40);
         
         //Creating textFields
-        JTextField username = new JTextField();
+        username = new JTextField();
         username.setBounds(155, 60, 200, 30);
-        JPasswordField password = new JPasswordField();
+        password = new JPasswordField();
         password.setBounds(155, 90, 200, 30);
         
         //Creating buttons
         JButton cancel = new JButton("Cancel");
         cancel.setBounds(155, 130, 90, 30);
-        JButton login = new JButton("Login");
+        login = new JButton("Login");
         login.setBounds(270,130,90,30);
         
         //Adding components to the panel
@@ -66,27 +71,6 @@ public class LoginView extends JFrame {
         pane.add(password);
         pane.add(cancel);
         pane.add(login);
-        
-        login.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String getUsername = username.getText();
-                String getPassword = password.getText();
-                
-                if(getUsername.trim().equals("admin") && getPassword.trim().equals("admin")) {
-                    JOptionPane.showMessageDialog(null, "User logged in successfully");
-                } else {
-                    JOptionPane.showMessageDialog(null, "Username and password does not match what is expected");
-                    try {
-                        username.setText("");
-                        password.setText("");
-                    } catch (Exception ex) {
-                        System.out.println(ex.getMessage());
-                    }
-                    
-                }
-            }
-        });
         
         cancel.addActionListener(new ActionListener() {
             @Override
@@ -100,6 +84,12 @@ public class LoginView extends JFrame {
         add(pane);
         setBackground(Color.gray);
         setVisible(true);
+    }
+
+    public class login {
+
+        public login() {
+        }
     }
     
 }
