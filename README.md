@@ -1,4 +1,4 @@
-# oop_project_Riak_Naho
+# oop_project_Riak_Nahom
 Group members
 Riak Ajuong Malou 18/1019/BIT-S
 Mihreteab Nahom 
